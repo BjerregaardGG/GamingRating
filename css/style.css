@@ -1,0 +1,135 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #333130; /* Lys baggrund for at matche hvide billeder */
+    color: #1f1f1f; /* Mørk tekst for kontrast */
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+/* Header med orange baggrund og læsbar tekst */
+header {
+    background-color: #ff6600; /* Orange baggrund */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #ffffff; /* Hvid tekst */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtil skygge for bedre læsbarhed */
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 0.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Hvide links */
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Samme skygge for links */
+}
+
+nav ul li a:hover {
+    color: #1f1f1f; /* Mørk tekst ved hover for kontrast */
+    text-shadow: none;
+}
+
+/* Top 5 layout */
+.top5 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.top-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff; /* Kort baggrund matchet til billeder */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtil skygge for dybde */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.top-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.top-card img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.top-card .info {
+    padding: 1rem;
+}
+
+.rank {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6600;
+    margin: 0 1rem;
+}
+
+.top-card h2 {
+    margin-bottom: 0.5rem;
+    color: #ff6600;
+}
+
+.top-card p {
+    margin-bottom: 0.5rem;
+    color: #333333; /* Mørkere tekst på lys baggrund */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #ff6600;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #e55a00;
+}
+
+footer {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    border-top: 2px solid #ff6600;
+    color: #1f1f1f;
+}
+
+/* Responsiv */
+@media(max-width: 768px){
+    .top-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-card img {
+        width: 100%;
+    }
+
+    .rank {
+        margin: 0;
+    }
+}
