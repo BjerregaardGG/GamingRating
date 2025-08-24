@@ -138,3 +138,15 @@ footer {
         gap: 10px;
     }
 }
+
+/* Meta info: udgivelsesdato og rating */
+.card .meta {
+    font-size: 0.85rem;
+    color: #ffcc00; /* gylden farve for ratings */
+    margin-bottom: 0.5rem;
+}
+
+.card .meta .rating {
+    font-weight: bold;
+    color: #ff6600; /* fremhævet rating */
+}
