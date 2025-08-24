@@ -8,11 +8,13 @@
 .gadgets-article {
     width: 100%;
     max-width: 300px; /* maks størrelse */
-    height: auto;
+    height: 175px;
     display: block;
     margin: 0 auto 1rem auto; /* centrerer billedet med lidt afstand */
     border-radius: 5px;
 }
+
+
 
 /* Body og layout for sticky footer */
 body {

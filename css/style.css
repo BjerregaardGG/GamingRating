@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #333130; /* Lys baggrund for at matche hvide billeder */
-    color: #1f1f1f; /* Mørk tekst for kontrast */
+    background-color: #121212;
+    color: #f4f4f4;
     margin: 0;
     line-height: 1.6;
 }
@@ -15,13 +15,13 @@ body {
 
 /* Header med orange baggrund og læsbar tekst */
 header {
-    background-color: #ff6600; /* Orange baggrund */
+    background-color: #1f1f1f;
     padding: 1rem 0;
     text-align: center;
 }
 
 header h1 {
-    color: #ffffff; /* Hvid tekst */
+    color: #ff6600;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtil skygge for bedre læsbarhed */
     margin: 0;
 }
@@ -51,6 +51,34 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+/* Specifikationer, Fordele og Ulemper */
+.top-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #1f1f1f; /* Mørk tekst for overskrifter */
+}
+
+.top-card ul.specs,
+.top-card ul.pros,
+.top-card ul.cons {
+    list-style: disc inside;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.top-card ul.specs li {
+    color: #3333cc; /* Blå farve for specifikationer */
+}
+
+.top-card ul.pros li {
+    color: #007f00; /* Grøn farve for fordele */
+}
+
+.top-card ul.cons li {
+    color: #cc0000; /* Rød farve for ulemper */
 }
 
 .top-card {
@@ -110,12 +138,10 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #ffffff;
+    background-color: #1f1f1f;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
-    border-top: 2px solid #ff6600;
-    color: #1f1f1f;
+    margin-top: 0; /* fjernet, da flexbox styrer placering */
 }
 
 /* Responsiv */
