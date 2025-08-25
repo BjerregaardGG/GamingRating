@@ -300,3 +300,58 @@ footer .footer-links, footer .socials {
         padding: 0.5rem 1rem;
     }
 }
+
+/* Drop-down menu */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown a {
+    cursor: pointer;
+}
+
+/* Skjul undermenuen som standard */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    z-index: 1000;
+}
+
+/* Drop-down links */
+nav ul li .dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #f4f4f4;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav ul li .dropdown-menu li a:hover {
+    background-color: #FFBD59;
+    color: #1f1f1f;
+}
+
+/* Vis menu ved hover */
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Responsiv drop-down */
+@media(max-width: 768px) {
+    nav ul li .dropdown-menu {
+        position: static;
+        display: none;
+    }
+
+    nav ul li.dropdown.active .dropdown-menu {
+        display: block;
+    }
+}
