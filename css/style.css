@@ -1,5 +1,6 @@
+/* ======================================== Grundlæggende ======================================== */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', 'Roboto', sans-serif;
     background-color: #121212;
     color: #f4f4f4;
     margin: 0;
@@ -13,7 +14,7 @@ body {
     padding: 1rem 0;
 }
 
-/* Header med orange baggrund og læsbar tekst */
+/* ======================================== Header ======================================== */
 header {
     background-color: #1f1f1f;
     padding: 1rem 0;
@@ -21,8 +22,9 @@ header {
 }
 
 header h1 {
+    font-weight: 700;
+    font-size: 2rem;
     color: #FFBD59;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtil skygge for bedre læsbarhed */
     margin: 0;
 }
 
@@ -36,64 +38,37 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Hvide links */
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Samme skygge for links */
+    color: #f4f4f4;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #1f1f1f; /* Mørk tekst ved hover for kontrast */
-    text-shadow: none;
+    color: #FFBD59;
 }
 
-/* Top 5 layout */
+/* ======================================== Top 5 layout ======================================== */
 .top5 {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-/* Specifikationer, Fordele og Ulemper */
-.top-card h3 {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: #1f1f1f; /* Mørk tekst for overskrifter */
-}
-
-.top-card ul.specs,
-.top-card ul.pros,
-.top-card ul.cons {
-    list-style: disc inside;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-}
-
-.top-card ul.specs li {
-    color: #3333cc; /* Blå farve for specifikationer */
-}
-
-.top-card ul.pros li {
-    color: #007f00; /* Grøn farve for fordele */
-}
-
-.top-card ul.cons li {
-    color: #cc0000; /* Rød farve for ulemper */
-}
-
+/* Kort design */
 .top-card {
     display: flex;
     align-items: center;
-    background-color: #ffffff; /* Kort baggrund matchet til billeder */
+    background-color: #ffffff;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtil skygge for dybde */
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
 }
 
 .top-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.5);
+    border: 1px solid #FFBD59;
 }
 
 .top-card img {
@@ -108,36 +83,61 @@ nav ul li a:hover {
 
 .rank {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 700;
     color: #FFBD59;
     margin: 0 1rem;
 }
 
 .top-card h2 {
     margin-bottom: 0.5rem;
+    font-weight: 600;
     color: #FFBD59;
 }
 
 .top-card p {
     margin-bottom: 0.5rem;
-    color: #333333; /* Mørkere tekst på lys baggrund */
+    color: #333333;
 }
 
+/* Specs, Fordele og Ulemper */
+.top-card h3 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #FFBD59;
+}
+
+.top-card ul.specs,
+.top-card ul.pros,
+.top-card ul.cons {
+    list-style: disc inside;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.top-card ul.specs li { color: #4da6ff; }
+.top-card ul.pros li { color: #66cc66; }
+.top-card ul.cons li { color: #ff6666; }
+
+/* ======================================== Knapper ======================================== */
 .btn {
     display: inline-block;
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
     background-color: #ff9933;
-    color: #ffffff;
+    color: #fff;
     border-radius: 5px;
     text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #e55a00;
+    background-color: #FFBD59;
+    color: #121212;
 }
 
-/* ===== Footer ===== */
+/* ======================================== Footer ======================================== */
 footer {
     background-color: #1f1f1f !important;
     color: #f4f4f4 !important;
@@ -146,11 +146,11 @@ footer {
     border-top: 1px solid #242424;
 }
 
-footer a { color: #ffcc00; text-decoration: none; }
-footer a:hover { color: #ff6600; }
+footer a { color: #FFBD59; text-decoration: none; font-weight: 500; }
+footer a:hover { color: #ff9933; }
 footer .footer-links { margin-top: 0.5rem; }
 
-/* Responsiv */
+/* ======================================== Responsive ======================================== */
 @media(max-width: 768px){
     .top-card {
         flex-direction: column;
@@ -166,7 +166,7 @@ footer .footer-links { margin-top: 0.5rem; }
     }
 }
 
-/* Drop-down menu */
+/* ======================================== Drop-down menu ======================================== */
 nav ul li.dropdown {
     position: relative;
 }
@@ -178,7 +178,7 @@ nav ul li.dropdown a {
 nav ul li .dropdown-menu {
     display: none;
     position: absolute;
-    top: 100%; /* lige under linket */
+    top: 100%;
     left: 0;
     background-color: #1f1f1f;
     border-radius: 5px;
@@ -186,28 +186,27 @@ nav ul li .dropdown-menu {
     list-style: none;
     padding: 0;
     z-index: 1000;
-    margin: 0; /* fjern evt. margin */
+    margin: 0;
 }
-/* Drop-down links */
+
 nav ul li .dropdown-menu li a {
     display: block;
     padding: 0.5rem 1rem;
-    color: #ffffff;
-    font-weight: bold;
+    color: #f4f4f4;
+    font-weight: 500;
     text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li .dropdown-menu li a:hover {
     background-color: #FFBD59;
-    color: #1f1f1f;
+    color: #121212;
 }
 
-/* Vis menu ved hover */
 nav ul li.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Responsiv drop-down til mobil */
 @media(max-width: 768px) {
     nav ul li.dropdown {
         width: 100%;
@@ -222,5 +221,4 @@ nav ul li.dropdown:hover .dropdown-menu {
         display: block;
     }
 }
-
 
