@@ -1,0 +1,138 @@
+/* ===== Base ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #f4f4f4;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main { flex: 1; }
+
+/* ===== Header ===== */
+header {
+    background: #1f1f1f;
+    padding: 1rem 0;
+    border-bottom: 1px solid #242424;
+}
+
+header h1 {
+    text-align: center;
+    color: #ff6600;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover { color: #ff6600; }
+nav a[aria-current="page"] { background: #242424; }
+
+/* ===== Hero ===== */
+.hero {
+    display: flex;
+    background: url('../images/White and Blue Modern Esport Facebook Cover.png') center/cover no-repeat;
+    flex-direction: column;
+    align-items: center;       /* Centrerer vandret */
+    justify-content: center;   /* Centrerer lodret indenfor hero */
+    text-align: center;
+    padding: 3rem 1rem;
+
+    width: 100%;
+}
+
+.hero h2 { font-size: 2rem; color: #ff6600; margin-bottom: 0.5rem; }
+.hero p { color: #ddd; }
+
+/* ===== About Section ===== */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* Centrerer vandret */
+    justify-content: center;   /* Centrerer lodret */
+    text-align: center;
+    width: 100%;               /* Fylder hele bredden */
+    max-width: 1000px;         /* Begrænser bredde af indhold */
+    margin: 3rem auto;         /* Centrerer sektionen på siden */
+}
+
+.about h2 { color: #ff6600; margin: 2rem 0 1rem; }
+.about p { max-width: 800px; margin-bottom: 1.25rem; }
+
+/* ===== Values Cards ===== */
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;   /* Centrerer kortene vandret */
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+
+.value-card {
+    background: #1f1f1f;
+    border: 1px solid #242424;
+    border-radius: 12px;
+    padding: 1.25rem;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    border-color: #2a2a2a;
+}
+
+.value-card h3 { color: #ffcc00; margin-bottom: 0.6rem; }
+.value-card p { font-size: 0.95rem; color: #d9d9d9; }
+
+/* ===== Disclosure ===== */
+.disclosure {
+    margin-top: 2rem;
+    background: #151515;
+    border: 1px dashed #2a2a2a;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    max-width: 800px;
+    text-align: center;
+}
+
+.disclosure strong { color: #ffcc00; }
+
+/* ===== Footer ===== */
+footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #242424;
+}
+
+footer a { color: #ffcc00; text-decoration: none; }
+footer a:hover { color: #ff6600; }
+footer .footer-links, footer .socials { margin-top: 0.5rem; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .values { flex-direction: column; align-items: center; }
+    .about { margin: 2rem auto; padding: 0 1rem; }
+}

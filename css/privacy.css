@@ -1,0 +1,104 @@
+/* ===== Base ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
+    color: #f4f4f4;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main { flex: 1; }
+
+.container { width: 90%; max-width: 1100px; margin: auto; }
+
+/* ===== Header ===== */
+header {
+    background: #1f1f1f;
+    padding: 1rem 0;
+    border-bottom: 1px solid #242424;
+}
+
+header h1 {
+    text-align: center;
+    color: #ff6600;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+nav a:hover { color: #ff6600; }
+nav a[aria-current="page"] { background: #242424; }
+
+/* ===== Hero ===== */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    background: url('../images/White and Blue Modern Esport Facebook Cover.png') center/cover no-repeat;
+    width: 100%;
+}
+
+.hero h2 { font-size: 2rem; color: #ff6600; margin-bottom: 0.5rem; }
+.hero p { color: #ddd; }
+
+/* ===== Privacy Section ===== */
+.privacy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 3rem auto;
+}
+
+.privacy h2 {
+    color: #ff6600;
+    margin: 2rem 0 1rem;
+}
+
+.privacy p {
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #242424;
+}
+
+footer a { color: #ffcc00; text-decoration: none; }
+footer a:hover { color: #ff6600; }
+footer .footer-links { margin-top: 0.5rem; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .privacy { margin: 2rem auto; padding: 0 1rem; }
+    nav ul { flex-direction: column; }
+}

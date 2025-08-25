@@ -150,3 +150,92 @@ footer {
     font-weight: bold;
     color: #ff6600; /* fremhævet rating */
 }
+
+/* Hero sektion */
+.hero {
+    background: url('../images/White and Blue Modern Esport Facebook Cover.png') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    margin-bottom: 2rem;
+}
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff6600;
+}
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Søgefelt */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+.search-box input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 60%;
+    max-width: 400px;
+}
+.search-box button {
+    border-radius: 0 8px 8px 0;       /* lidt rundere hjørner */     /* vi kan fjerne margin, så den sidder tæt på input */
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(135deg, #ff6600, #ff9933); /* flot gradient */
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+}
+
+.search-box button:hover {
+    background: linear-gradient(135deg, #ff9933, #ff6600); /* vend gradient på hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Nyhedssektion */
+.news-section {
+    margin: 2rem 0;
+}
+.news-section h2 {
+    margin-bottom: 1rem;
+    color: #ff6600;
+    text-align: center;
+}
+.news-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.news-section ul li {
+    margin: 0.5rem 0;
+}
+.news-section ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+.news-section ul li a:hover {
+    color: #ff6600;
+}
+
+/* Footer ekstra */
+footer .footer-links, footer .socials {
+    margin-top: 0.5rem;
+}
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #ff6600;
+}

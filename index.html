@@ -20,39 +20,62 @@
 <body>
 <header>
     <div class="container">
-        <h1>Top Gaming-Udstyr 2025 – Guide til Gamere</h1>
+        <h1>GamingRating.dk</h1>
         <nav>
             <ul>
                 <li><a href="index.html" aria-current="page">Forside</a></li>
                 <li><a href="accessories.html">Gadgets</a></li>
                 <li><a href="headsets.html">Headsets</a></li>
+                <li><a href="about.html">Om os</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
+<!-- Hero sektion -->
+<section class="hero">
+    <div class="container">
+        <h2>Top Gaming-Udstyr 2025</h2>
+        <p>Din komplette guide til det nyeste gaming-udstyr, testet og vurderet af gamere.</p>
+        <a href="accessories.html" class="btn">Se vores anbefalinger</a>
+    </div>
+</section>
+
 <main>
     <div class="container">
-        <section class="card-section">
 
-            <!-- Gaming Gadgets -->
-            <article class="card" itemscope itemtype="https://schema.org/Product">
-                <img src="images/Skærmbillede%202025-08-23%20kl.%2000.53.45.png" alt="Gaming-Gadgets 2025" class="gadgets-article" itemprop="image">
-                <h2 itemprop="name">Gaming-Gadgets</h2>
-                <p itemprop="description">Udforsk de bedste gaming-gadgets i 2025 med fokus på ergonomi, innovation og funktionalitet.</p>
-                <p class="meta">Udgivet: <time datetime="2025-08-23">23. august 2025</time></p>
-                <a href="accessories.html" class="btn" rel="nofollow" target="_blank">Se Gaming-Gadgets</a>
-            </article>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Søg blandt artikler...">
+            <button class="btn" id="searchButton">Søg</button>
+        </div>
 
+        <section class="card-section" id="productList">
             <!-- Gaming Headsets -->
-            <article class="card" itemscope itemtype="https://schema.org/Product">
+            <article class="card" itemscope itemtype="https://schema.org/Product" data-title="Gaming-Headsets">
                 <img src="images/FreeVector-Shiny-Headphones.jpg" alt="Gaming-Headsets 2025" class="gadgets-article" itemprop="image">
-                <h2 itemprop="name">Gaming-Headsets</h2>
+                <h2 itemprop="name">Headsets</h2>
                 <p itemprop="description">Find de bedste gaming-headsets i 2025 med høj lydkvalitet, komfort og avancerede funktioner.</p>
                 <p class="meta">Udgivet: <time datetime="2025-08-24">24. august 2025</time></p>
-                <a href="headsets.html" class="btn" rel="nofollow" target="_blank">Se Gaming-Headsets</a>
+                <a href="headsets.html" class="btn">Se Gaming-Headsets</a>
             </article>
 
+            <!-- Gaming Gadgets -->
+            <article class="card" itemscope itemtype="https://schema.org/Product" data-title="Gaming-Gadgets">
+                <img src="images/Skærmbillede%202025-08-23%20kl.%2000.53.45.png" alt="Gaming-Gadgets 2025" class="gadgets-article" itemprop="image">
+                <h2 itemprop="name">Gadgets</h2>
+                <p itemprop="description">Udforsk de bedste gaming-gadgets i 2025 med fokus på ergonomi, innovation og funktionalitet.</p>
+                <p class="meta">Udgivet: <time datetime="2025-08-23">23. august 2025</time></p>
+                <a href="accessories.html" class="btn">Se Gaming-Gadgets</a>
+            </article>
+        </section>
+
+        <!-- Nyhedssektion -->
+        <section class="news-section">
+            <h2>Seneste artikler</h2>
+            <ul>
+                <li><a href="accessories.html">De 5 bedste gaming gadgets 2025</a></li>
+                <li><a href="headsets.html">De 5 bedste gaming headsets 2025</a></li>
+            </ul>
         </section>
     </div>
 </main>
@@ -60,8 +83,13 @@
 <footer>
     <div class="container">
         <p>&copy; 2025 GamingRating – Din guide til gaming udstyr og tilbehør</p>
+        <div class="footer-links">
+            <a href="about.html">Om os</a> |
+            <a href="privacy.html">Privatlivspolitik</a>
+        </div>
     </div>
 </footer>
 <script src="js/script.js"></script>
+<script src="js/søgefunktion.js"></script>
 </body>
 </html>
