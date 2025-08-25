@@ -24,7 +24,7 @@ header {
 
 header h1 {
     text-align: center;
-    color: #ff6600;
+    color: #FFBD59;
     margin-bottom: 0.5rem;
 }
 
@@ -45,7 +45,7 @@ nav a {
     transition: 0.2s;
 }
 
-nav a:hover { color: #ff6600; }
+nav a:hover { color: #FFBD59; }
 nav a[aria-current="page"] { background: #242424; }
 
 /* ===== Hero ===== */
@@ -60,7 +60,7 @@ nav a[aria-current="page"] { background: #242424; }
     width: 100%;
 }
 
-.hero h2 { font-size: 2rem; color: #ff6600; margin-bottom: 0.5rem; }
+.hero h2 { font-size: 2rem; color: #FFBD59; margin-bottom: 0.5rem; }
 .hero p { color: #ddd; }
 
 /* ===== Privacy Section ===== */
@@ -76,7 +76,7 @@ nav a[aria-current="page"] { background: #242424; }
 }
 
 .privacy h2 {
-    color: #ff6600;
+    color: #FFBD59;
     margin: 2rem 0 1rem;
 }
 

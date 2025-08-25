@@ -21,7 +21,7 @@ header {
 }
 
 header h1 {
-    color: #ff6600;
+    color: #FFBD59;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Subtil skygge for bedre læsbarhed */
     margin: 0;
 }
@@ -109,13 +109,13 @@ nav ul li a:hover {
 .rank {
     font-size: 3rem;
     font-weight: bold;
-    color: #ff6600;
+    color: #FFBD59;
     margin: 0 1rem;
 }
 
 .top-card h2 {
     margin-bottom: 0.5rem;
-    color: #ff6600;
+    color: #FFBD59;
 }
 
 .top-card p {
@@ -127,7 +127,7 @@ nav ul li a:hover {
     display: inline-block;
     margin-top: 0.5rem;
     padding: 0.5rem 1rem;
-    background-color: #ff6600;
+    background-color: #ff9933;
     color: #ffffff;
     border-radius: 5px;
     text-decoration: none;
@@ -139,7 +139,8 @@ nav ul li a:hover {
 
 /* ===== Footer ===== */
 footer {
-    background: #1f1f1f;
+    background-color: #1f1f1f !important;
+    color: #f4f4f4 !important;
     text-align: center;
     padding: 1rem 0;
     border-top: 1px solid #242424;
