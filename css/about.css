@@ -50,7 +50,7 @@ nav a[aria-current="page"] { background: #242424; }
 /* ===== Hero ===== */
 .hero {
     display: flex;
-    background: url('../images/White and Blue Modern Esport Facebook Cover.png') center/cover no-repeat;
+    background: url('../images_gadgets/White and Blue Modern Esport Facebook Cover.png') center/cover no-repeat;
     flex-direction: column;
     align-items: center;       /* Centrerer vandret */
     justify-content: center;   /* Centrerer lodret indenfor hero */
