@@ -17,7 +17,7 @@ body {
 /* ======================================== Header ======================================== */
 header {
     background-color: #1f1f1f;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -28,13 +28,13 @@ header h1 {
     margin: 0;
 }
 
-
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 0.5rem;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -46,6 +46,52 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFBD59;
+}
+
+/* ======================================== Drop-down menu ======================================== */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown a {
+    cursor: pointer;
+}
+
+nav ul li.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+nav ul li.dropdown .dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #f4f4f4;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li.dropdown .dropdown-menu li a:hover {
+    background-color: #FFBD59;
+    color: #121212;
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Toggle-klasse til mobil klik */
+nav ul li.dropdown.active .dropdown-menu {
+    display: block;
 }
 
 /* ======================================== Top 5 layout ======================================== */
@@ -165,57 +211,30 @@ footer .footer-links { margin-top: 0.5rem; }
     .rank {
         margin: 0;
     }
-}
 
-/* ======================================== Drop-down menu ======================================== */
-nav ul li.dropdown {
-    position: relative;
-}
-
-nav ul li.dropdown a {
-    cursor: pointer;
-}
-
-nav ul li .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #1f1f1f;
-    border-radius: 5px;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    z-index: 1000;
-    margin: 0;
-}
-
-nav ul li .dropdown-menu li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #f4f4f4;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-nav ul li .dropdown-menu li a:hover {
-    background-color: #FFBD59;
-    color: #121212;
-}
-
-nav ul li.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-@media(max-width: 768px) {
-    nav ul li.dropdown {
-        width: 100%;
+    /* Header og menu på mobil */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
     }
 
-    nav ul li .dropdown-menu {
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #242424;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.8rem 0;
+    }
+
+    /* Dropdown på mobil: klik i stedet for hover */
+    nav ul li.dropdown .dropdown-menu {
         position: static;
         display: none;
+        width: 100%;
     }
 
     nav ul li.dropdown.active .dropdown-menu {

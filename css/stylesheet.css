@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: 'Inter', 'Roboto', sans-serif; /* Professionel sans-serif */
+    font-family: 'Inter', 'Roboto', sans-serif;
     background-color: #121212;
     color: #f4f4f4;
     line-height: 1.6;
@@ -17,10 +17,21 @@ body {
     min-height: 100vh;
 }
 
-/* ======================================== Topbar ======================================== */
+main {
+    flex: 1;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ========================================
+   Topbar
+======================================== */
 .topbar {
-    margin-top: -33px;
-    background-color: #FFBD59; /* Orange topbar */
+    background-color: #FFBD59;
     color: #1f1f1f;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -28,13 +39,11 @@ body {
     white-space: nowrap;
 }
 
-
 .topbar-content {
-        display: inline-block;
-        padding-left: 100%; /* starter uden for venstre kant */
-        animation: ticker 13s linear infinite;
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 13s linear infinite;
 }
-
 
 .topbar .label {
     font-weight: 600;
@@ -51,20 +60,9 @@ body {
     text-decoration: underline;
 }
 
-/* Ticker animation */
 @keyframes ticker {
-    0%   { transform: translateX(0%); }
+    0% { transform: translateX(0%); }
     100% { transform: translateX(-100%); }
-}
-
-main {
-    flex: 1; /* fylder plads mellem header og footer */
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
 }
 
 /* ========================================
@@ -73,36 +71,99 @@ main {
 header {
     background-color: #1f1f1f;
     padding: 1rem 0;
+    text-align: center;
 }
 
 header h1 {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    text-align: center;
-    margin-bottom: 0.5rem;
     color: #FFBD59;
+    margin-bottom: 0.5rem;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 600;
     text-decoration: none;
     color: #f4f4f4;
+    cursor: pointer;
 }
 
 nav ul li a:hover {
     color: #FFBD59;
+}
+
+/* Drop-down menu */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1f1f1f;
+    border-radius: 5px;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    z-index: 1000;
+}
+
+nav ul li .dropdown-menu li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #f4f4f4;
+}
+
+nav ul li .dropdown-menu li a:hover {
+    background-color: #FFBD59;
+    color: #1f1f1f;
+}
+
+/* Hover på desktop */
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobil drop-down */
+@media(max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #242424;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.8rem 0;
+    }
+
+    nav ul li .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul li.dropdown.active .dropdown-menu {
+        display: block;
+    }
 }
 
 /* ========================================
@@ -117,7 +178,6 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -125,7 +185,6 @@ nav ul li a:hover {
 }
 
 .hero p {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -152,7 +211,6 @@ nav ul li a:hover {
     flex: 1 1 calc(50% - 1rem);
     max-width: 350px;
     transition: transform 0.3s, box-shadow 0.3s;
-    vertical-align: top;
     text-align: center;
 }
 
@@ -162,14 +220,12 @@ nav ul li a:hover {
 }
 
 .card h2 {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #FFBD59;
 }
 
 .card p {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     margin-bottom: 0.5rem;
@@ -177,7 +233,6 @@ nav ul li a:hover {
 
 /* Meta info */
 .card .meta {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 0.85rem;
     color: #ffcc00;
@@ -188,9 +243,7 @@ nav ul li a:hover {
     color: #FFBD59;
 }
 
-/* ========================================
-   Billeder
-======================================== */
+/* Billeder */
 .gadgets-article {
     width: 100%;
     max-width: 300px;
@@ -205,9 +258,7 @@ nav ul li a:hover {
 ======================================== */
 .btn {
     display: inline-block;
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 600;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
     background-color: #ff9933;
     color: #fff;
@@ -220,6 +271,7 @@ nav ul li a:hover {
 
 .btn:hover {
     background-color: #FFBD59;
+    color: #121212;
 }
 
 /* ========================================
@@ -228,8 +280,7 @@ nav ul li a:hover {
 .search-box {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin: 2rem 0 4rem;
 }
 
 .search-box input {
@@ -238,7 +289,6 @@ nav ul li a:hover {
     border-radius: 5px 0 0 5px;
     width: 60%;
     max-width: 400px;
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 500;
 }
 
@@ -268,7 +318,6 @@ nav ul li a:hover {
 }
 
 .news-section h2 {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 600;
     margin-bottom: 1rem;
     color: #FFBD59;
@@ -286,7 +335,6 @@ nav ul li a:hover {
 }
 
 .news-section ul li a {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 500;
     color: #f4f4f4;
     text-decoration: none;
@@ -307,7 +355,6 @@ footer {
 
 footer p,
 footer a {
-    font-family: 'Inter', 'Roboto', sans-serif;
     font-weight: 400;
 }
 
@@ -323,11 +370,6 @@ footer .footer-links, footer .socials {
    Responsive
 ======================================== */
 @media(max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     .card {
         flex: 1 1 100%;
     }
@@ -338,60 +380,5 @@ footer .footer-links, footer .socials {
 
     .search-box button {
         padding: 0.5rem 1rem;
-    }
-}
-
-/* Drop-down menu */
-nav ul li.dropdown {
-    position: relative;
-}
-
-nav ul li.dropdown a {
-    cursor: pointer;
-}
-
-/* Skjul undermenuen som standard */
-nav ul li .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #1f1f1f;
-    border-radius: 5px;
-    min-width: 160px;
-    list-style: none;
-    padding: 0;
-    z-index: 1000;
-}
-
-/* Drop-down links */
-nav ul li .dropdown-menu li a {
-    display: block;
-    padding: 0.5rem 1rem;
-    color: #f4f4f4;
-    font-family: 'Inter', 'Roboto', sans-serif;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-nav ul li .dropdown-menu li a:hover {
-    background-color: #FFBD59;
-    color: #1f1f1f;
-}
-
-/* Vis menu ved hover */
-nav ul li.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Responsiv drop-down */
-@media(max-width: 768px) {
-    nav ul li .dropdown-menu {
-        position: static;
-        display: none;
-    }
-
-    nav ul li.dropdown.active .dropdown-menu {
-        display: block;
     }
 }
