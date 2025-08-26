@@ -381,4 +381,38 @@ footer .footer-links, footer .socials {
     .search-box button {
         padding: 0.5rem 1rem;
     }
+
+    /* Header og menu på mobil – centreret */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #242424;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.8rem 0;
+    }
+
+    /* Dropdown på mobil: klik i stedet for hover */
+    nav ul li.dropdown .dropdown-menu {
+        position: static;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li.dropdown.active .dropdown-menu {
+        display: block;
+    }
 }

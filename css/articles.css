@@ -197,7 +197,9 @@ footer a { color: #FFBD59; text-decoration: none; font-weight: 500; }
 footer a:hover { color: #ff9933; }
 footer .footer-links { margin-top: 0.5rem; }
 
-/* ======================================== Responsive ======================================== */
+/* ========================================
+   Responsive
+======================================== */
 @media(max-width: 768px){
     .top-card {
         flex-direction: column;
@@ -212,11 +214,15 @@ footer .footer-links { margin-top: 0.5rem; }
         margin: 0;
     }
 
-    /* Header og menu på mobil */
+    /* Header og menu på mobil – centreret */
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 0;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
     }
 
     nav ul li {
@@ -235,6 +241,7 @@ footer .footer-links { margin-top: 0.5rem; }
         position: static;
         display: none;
         width: 100%;
+        text-align: center;
     }
 
     nav ul li.dropdown.active .dropdown-menu {
