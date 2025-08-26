@@ -138,31 +138,75 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 /* Mobil drop-down */
 @media(max-width: 768px) {
+    /* Header h1 centreret */
+    header h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    /* Navigation centreret */
     nav ul {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        text-align: center;
     }
 
     nav ul li {
         width: 100%;
         text-align: center;
         border-top: 1px solid #242424;
+        margin: 0;
     }
 
     nav ul li a {
         display: block;
+        width: 100%;
         padding: 0.8rem 0;
     }
 
-    nav ul li .dropdown-menu {
+    /* Drop-down menu */
+    nav ul li.dropdown .dropdown-menu {
         position: static;
         display: none;
         width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
     }
 
     nav ul li.dropdown.active .dropdown-menu {
         display: block;
+    }
+
+    /* ========================================
+       Kort-sektioner – mobil
+    ======================================= */
+    .card-section {
+        display: flex;
+        flex-direction: column; /* en ad gangen */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px; /* sørger for at de ikke bliver for brede */
+        flex: none;
+        text-align: center;
+    }
+
+    /* Søgefelt mobil */
+    .search-box input {
+        width: 70%;
+    }
+
+    .search-box button {
+        padding: 0.5rem 1rem;
     }
 }
 
@@ -364,54 +408,4 @@ footer a:hover {
 
 footer .footer-links, footer .socials {
     margin-top: 0.5rem;
-}
-
-/* ========================================
-   Mobil-header – Forside
-======================================== */
-@media (max-width: 768px) {
-    /* Header h1 centreret */
-    header h1 {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    /* Navigation centreret */
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;    /* centrerer li-ene horisontalt */
-        justify-content: center;
-        width: 100%;
-        padding: 0;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-        border-top: 1px solid #242424;
-        margin: 0;  /* fjerner evt. margin der skubber højre */
-    }
-
-    nav ul li a {
-        display: block;
-        width: 100%;
-        padding: 0.8rem 0;
-    }
-
-    /* Drop-down menu */
-    nav ul li.dropdown .dropdown-menu {
-        position: static;
-        display: none;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li.dropdown.active .dropdown-menu {
-        display: block;
-    }
 }
