@@ -249,3 +249,26 @@ footer .footer-links { margin-top: 0.5rem; }
     }
 }
 
+#top_button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    background-color: #ff9933;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+    opacity: 0;         /* skjult som standard */
+    pointer-events: none; /* klik kan ikke registreres, når skjult */
+}
+
+#top_button:hover {
+    background-color: #FFBD59;
+    transform: translateX(-50%) scale(1.1);
+}
+
