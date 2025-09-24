@@ -1,8 +1,10 @@
-GamingAFF
+# GamingAFF
 GamingAFF er en simpel, statisk HTML-baseret hjemmeside, der præsenterer og promoverer gaming-tilbehør som tastaturer, mus, headsets, laptops og skærme. Hjemmesiden er designet til at give besøgende en overskuelig og visuel præsentation af forskellige gamingprodukter.
-🌐 Besøg hjemmesiden
+
+## 🌐 Besøg hjemmesiden
 Du kan besøge den live hjemmeside her: https://gamingrating.dk
-📁 Struktur
+
+## 📁 Struktur
 Projektet er opdelt i følgende mapper og filer:
 images_gadgets/: Indeholder billeder af gaminggadgets.
 images_headsets/: Indeholder billeder af headsets.
@@ -23,12 +25,15 @@ mice.html: En side med oversigt over mus.
 monitors.html: En side med oversigt over skærme.
 privacy.html: En side med privatlivspolitik.
 sitemap.xml: En XML-fil til søgemaskineoptimering.
-🚀 Kom i gang
+
+### 🚀 Kom i gang
 Klon eller download projektet til din lokale maskine.
 Åbn index.html i din foretrukne webbrowser for at se hjemmesiden.
-🛠 Teknologier
+
+### 🛠 Teknologier
 HTML5
 CSS3
 JavaScript
-📄 Licens
+
+### 📄 Licens
 Dette projekt er licenseret under MIT-licensen – se LICENSE for detaljer.
