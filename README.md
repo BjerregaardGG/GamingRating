@@ -1,5 +1,5 @@
-# GamingAFF
-GamingAFF er en simpel, statisk HTML-baseret hjemmeside, der præsenterer og promoverer gaming-tilbehør som tastaturer, mus, headsets, laptops og skærme. Hjemmesiden er designet til at give besøgende en overskuelig og visuel præsentation af forskellige gamingprodukter.
+# GamingRating
+GamingRating er en simpel, statisk HTML-baseret hjemmeside, der præsenterer og promoverer gaming-tilbehør som tastaturer, mus, headsets, laptops og skærme. Hjemmesiden er designet til at give besøgende en overskuelig og visuel præsentation af forskellige gamingprodukter.
 
 ## 🌐 Besøg hjemmesiden
 Du kan besøge den live hjemmeside her: https://gamingrating.dk
